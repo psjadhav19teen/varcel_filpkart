@@ -1,0 +1,17 @@
+{
+    "builds":[
+        {
+            "src":"filpkart/wsgi.py",
+            "use":"@varcel/python",
+            "config":{
+                "maxLambdaSize":"15mb","runtime":"python3.13"
+            }
+        }
+    ],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"filpkart/wsgi.py"
+        }
+    ]
+}
